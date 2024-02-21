@@ -8,7 +8,8 @@
         Title="MainWindow" Height="350" Width="500">
     <Grid x:Name="grid" Background="#FFFFFF">
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -22,5 +23,14 @@
         <Button Background="#2274a5 " Height="100" Width="100" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="25"></Button>
         <Button Background="#2274a5 " Height="100" Width="100" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="25"></Button>
         <Button Background="#2274a5 " Height="100" Width="100" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="25"></Button>
+        <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Center" >
+            <TextBlock Text="Modo de Juego" VerticalAlignment="Center" Margin="10"/>
+            <ComboBox x:Name="timeLimitComboBox" SelectedIndex="0" SelectionChanged="TimeLimitComboBox_SelectionChanged" Margin="10,20,10,20">
+                <ComboBoxItem Content="Facil"/>
+                <ComboBoxItem Content="Normal"/>
+                <ComboBoxItem Content="Dificil"/>
+            </ComboBox>
+        </StackPanel>
     </Grid>
+   
 </Window>
